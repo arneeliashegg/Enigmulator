@@ -1,0 +1,7 @@
+https://www.delftstack.com/howto/rust/rust-global-variable/
+https://doc.rust-lang.org/book/
+https://chat.openai.com/
+https://en.wikipedia.org/wiki/Enigma_rotor_details
+https://en.wikipedia.org/wiki/Enigma_machine
+https://cryptii.com/pipes/enigma-machine
+https://stackoverflow.com/
