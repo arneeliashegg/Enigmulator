@@ -223,29 +223,16 @@ fn encipher(
         (r3_left_new, r3_right_new) = rotor::rotate(r3_left.clone(), r3_right.clone());
     }
 
-    //println!{"REF: {:?}", ref_right};
-
-    //println!("Rotated: {:?} ; {:?}", r3_left_new, r3_right_new);
-
     let mut sig = keyboard::forward(letter);
     sig = plugboard::forward(&pb_right, &pb_left, sig);
-    //println!("{:?}", sig);
     sig = rotor::forward(&r3_left_new, &r3_right_new, sig);
-    //println!("{:?}", sig);
     sig = rotor::forward(&r2_left_new, &r2_right_new, sig);
-    //println!("{:?}", sig);
     sig = rotor::forward(&r1_left_new, &r1_right_new, sig);
-    //println!("{:?}", sig);
     sig = reflect(&ref_left, &ref_right, sig);
-    //println!("{:?}", sig);
     sig = rotor::backward(&r1_left_new, &r1_right_new, sig);
-    //println!("{:?}", sig);
     sig = rotor::backward(&r2_left_new, &r2_right_new, sig);
-    //println!("{:?}", sig);
     sig = rotor::backward(&r3_left_new, &r3_right_new, sig);
-    //println!("{:?}", sig);
     sig = plugboard::backward(&pb_right, &pb_left, sig);
-    //println!("{:?}", sig);
     let letter = keyboard::backward(sig);
     return (
         letter,

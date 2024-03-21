@@ -11,18 +11,6 @@ lazy_static! {
     };
 }
 
-pub fn main() {
-    //let mychar: char = 'a';
-
-    /*
-    for charac in ALPHABET.iter() {
-        println!("{:?}", charac);
-    }
-    */
-    //println!("{:?}", forward(mychar));
-    //println!("{:?}", backward(3usize));
-}
-
 pub fn forward(c: char) -> usize {
     let index = ALPHABET.iter().position(|&x| x == c);
     return index.unwrap().try_into().unwrap();

@@ -1,4 +1,3 @@
-
 pub fn init(ref_config: char) -> (Vec<char>, Vec<char>) {
     let mut left_list: Vec<char> = Vec::new();
     for c in 'a'..='z' {
@@ -46,7 +45,6 @@ pub fn reflect(left_list: &Vec<char>, right_list: &Vec<char>, c_index: usize) ->
 }
 
 fn get_index(c: char, v: &Vec<char>) -> usize {
-    //println!("c: {:?}, v: {:?}", c, v);
     if let c_index = v.iter().position(|&x| x == c) {
         return c_index.unwrap();
     } else {

@@ -1,12 +1,7 @@
-pub fn main(rotor_conf: usize) -> usize{
-    // something
-    //
+pub fn main(rotor_conf: usize) -> usize {
     let (mut left_rotor, mut right_rotor, turnover_notch) = init(1);
 
-    //(left_rotor, right_rotor) = rotate_to_char(left_rotor, right_rotor, 'y');
-    //println!("{:?} \n {:?}", left_rotor, right_rotor);
     let x = forward(&left_rotor, &right_rotor, 0);
-    //println!("{}", x);
     return x;
 }
 
